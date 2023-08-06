@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excercise 2</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        form input {
+            background-color: #181211;
+            color: white;
+        }
+
+        button {
+            background-color: #181211;
+            color: white;
+            font-family: 'Open Sans Regular', sans-serif;
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+    <div class="w-auto h-fit card m-8">
+        <div class="p-8">
+            <h1 class="opensans-bold">Login</h1>
+            <form class="opensans-regular">
+                <label for="username">Username:</label><br />
+                <input type="text" id="username" name="username" required /><br />
+                <label for="password">Password:</label><br />
+                <input type="password" id="password" name="password" required /><br />
+                <button class="opensans-regular" type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="flex flex-row">
+        <div class="w-fit h-fit card m-8">
+            <div class="p-8">
+                <h1 class="opensans-bold">Contact Us</h1>
+                <form action="" class="opensans-regular m-8">
+                    <label class="opensans-regular" for="fname">Name:</label><br />
+                    <input type="text" id="fname" name="fname" /><br />
+                    <label class="opensans-regular" for="lname">Email:</label><br />
+                    <input type="text" id="lname" name="lname" /><br />
+                    <label class="opensans-regular" for="mname">Message</label><br />
+                    <input type="text" id="mname" name="mname" />
+                    <button class="opensans-regular" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="w-fit h-fit card m-8">
+            <div class="p-8">
+                <h1 class="opensans-bold">Survey Form</h1>
+                <p class="opensans-regular">What was the first programming language you've learned and at what age?</p>
+                <form>
+                    <label class="opensans-regular" for="name">Name (Surname, Firstname & Middle Initial):</label><br />
+                    <input type="text" id="username" name="username" required /><br />
+                    <label class="opensans-regular" for="age">Age:</label><br />
+                    <input type="number" id="age" name="age" max="99" required /><br />
+                    <script>
+                        document.getElementById("age").addEventListener("input", function () {
+                            var value = parseInt(this.value);
+                            if (isNaN(value)) {
+                                this.value = "";
+                            } else if (value > 99) {
+                                this.value = "99";
+                            }
+                        });
+                    </script>
+                    <br />
+                    <div>
+                        <label for="gender">Gender</label><br>
+                        <label class="opensans-regular">
+                            <input class="opensans-regular" class="opensans-regular" type="radio" name="gender"
+                                value="male" />
+                            Male
+                        </label>
+                    </div>
+                    <div>
+                        <label class="opensans-regular">
+                            <input class="opensans-regular" type="radio" name="gender" value="female" />
+                            Female
+                        </label>
+                    </div>
+
+                    <label class="opensans-regular" for="language">Select a language:</label>
+                    <select class="opensans-regular" id="language" name="language">
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="csharp">C#</option>
+                        <option value="php">PHP</option>
+                        <option value="ruby">Ruby</option>
+                        <option value="swift">Swift</option>
+                        <option value="kotlin">Kotlin</option>
+                        <option value="typescript">TypeScript</option>
+                        <option value="go">Go</option>
+                        <option value="rust">Rust</option>
+                        <option value="scala">Scala</option>
+                        <option value="r">R</option>
+                        <option value="cpp">C++</option>
+                        <option value="c">C</option>
+                        <option value="dart">Dart</option>
+                        <option value="perl">Perl</option>
+                        <option value="lua">Lua</option>
+                        <option value="otherss">Others</option>
+                    </select>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!--
+
+    <div class="card login-card">
+      <h2>Login Form</h2>
+      
+    </div>
+
+    <div class="card survey-card">
+      <h2>Survey</h2>
+      
+    </div> -->
+</body>
+
+</html>
